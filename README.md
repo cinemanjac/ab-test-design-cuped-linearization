@@ -13,8 +13,8 @@ and statistical validation via simulations.
 The experiment design includes:
 
 - **Metric Linearization**  
-  Revenue per user is transformed into a linear metric to enable
-  valid statistical testing.
+  The revenue-based ratio metric is transformed into a linear metric
+  to enable valid statistical testing.
 
 - **CUPED**  
   A pre-experimental covariate is used to reduce variance.
@@ -27,7 +27,6 @@ The experiment design includes:
 - **Validation**  
   AA simulations verify Type I error control,  
   AB simulations confirm statistical power,  
-  SRM checks ensure correct traffic splitting.
 
 
 ## Results
@@ -42,7 +41,7 @@ The experiment design includes:
 ## Tech Stack
 
 - **Programming:** Python (Pandas, NumPy, SciPy, Matplotlib, Seaborn, Tqdm)
-- **Statistical Methods:**  Metric Linearization, CUPED, Monte Carlo Simulations, Chi-square test (SRM), Correlation Analysis
+- **Statistical Methods:**  Metric Linearization, CUPED, Monte Carlo Simulations, Correlation Analysis
 
 &nbsp;
 
