@@ -1,7 +1,6 @@
-# A/B Test Design for Revenue Metrics with Linearization and CUPED
+# A/B Test Design with CUPED for Revenue Metric
 
-This project demonstrates how to design and validate an A/B experiment
-for a ratio-based business metric (revenue per user).
+This project demonstrates how to design and validate an A/B test for a revenue-based metric.
 
 The focus is on **experiment design**, rather than post-experiment analysis:
 metric construction, variance reduction, sample size estimation,
@@ -12,36 +11,32 @@ and statistical validation via simulations.
 
 The experiment design includes:
 
-- **Metric Linearization**  
-  The revenue-based ratio metric is transformed into a linear metric
-  to enable valid statistical testing.
-
 - **CUPED**  
   A pre-experimental covariate is used to reduce variance.
-  The optimal pre-period window is selected based on correlation.
 
 - **Sample Size Calculation**  
-  Business MDE (percentage uplift) is translated into
-  a statistical MDE for the linearized metric.
+  Business MDE (percentage uplift) is translated into an absolute effect
+  and used to estimate required sample size.
+
+- **Duration Estimation**
+  Sample size is converted into experiment duration using historical traffic.
 
 - **Validation**  
   AA simulations verify Type I error control,  
-  AB simulations confirm statistical power,  
+  AB simulations validate statistical power and compare CUPED vs raw metric
 
 
 ## Results
 
-- **Sample Size Reduction:**  
-  Applying CUPED reduced the required sample size by approximately **2.2x**.
-
-- **Experiment Efficiency:**  
-  The expected experiment duration was reduced by **~10 weeks**
+- **Variance reduction** leads to a significant decrease in required sample size  
+- **CUPED improves statistical power** under the same traffic constraints  
+- **Simulation confirms correctness of the experimental design**
 
 
 ## Tech Stack
 
 - **Programming:** Python (Pandas, NumPy, SciPy, Matplotlib, Seaborn, Tqdm)
-- **Statistical Methods:**  Metric Linearization, CUPED, Monte Carlo Simulations, Correlation Analysis
+- **Statistical Methods:** Pearson Correlation, CUPED, Monte Carlo Simulations, T-test
 
 &nbsp;
 
