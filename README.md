@@ -18,7 +18,7 @@ The experiment design includes:
   Business MDE (percentage uplift) is translated into an absolute effect
   and used to estimate required sample size.
 
-- **Duration Estimation**
+- **Duration Estimation** 
   Sample size is converted into experiment duration using historical traffic.
 
 - **Validation**  
